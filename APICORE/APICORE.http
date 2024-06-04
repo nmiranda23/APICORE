@@ -1,0 +1,41 @@
+@APICORE_HostAddress = http://localhost:5284
+
+GET {{APICORE_HostAddress}}/api/producto/lista
+Accept: application/json
+
+###
+
+GET {{APICORE_HostAddress}}/api/producto/obtener/3
+Accept: application/json
+
+###
+
+POST {{APICORE_HostAddress}}/api/producto/crear
+Accept: application/json
+Content-Type: application/json
+
+{
+    "CodigoBarra" : "00005",
+    "Nombre": "test",
+    "Marca": "test",
+    "Categoria": "test",
+    "Precio": 200
+}
+
+###
+
+PUT {{APICORE_HostAddress}}/api/producto/editar
+Accept: application/json
+Content-Type: application/json
+
+{
+    "IdProducto" : 5,
+    "CodigoBarra" : "00005",
+    "Nombre": "test2",
+    "Precio": 3000
+}
+
+###
+
+DELETE {{APICORE_HostAddress}}/api/producto/eliminar/5
+Accept: application/json
